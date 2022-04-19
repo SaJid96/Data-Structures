@@ -30,6 +30,36 @@ const isPlaindrome=(string)=>{
 
 }
 
+//solution 2
+
+const Plaindrome = (string)=>{
+    const revereCards=[];
+
+    for(let i=string.length-1;i>=0;i--){
+        revereCards.push(string[i]);
+
+    }
+    return string === revereCards.join('');
+}
+
+
+
+//solution 3
+
+const iSPalindrome=(string)=>{
+
+
+    let leftIdx=0;
+    let rightIdx=string.length-1;
+
+    while(leftIdx <rightIdx){
+        if (string[leftIdx] !== string[rightIdx]) return false;
+        leftIdx++;
+        rightIdx--; 
+    }
+
+
+}
 
 
 
