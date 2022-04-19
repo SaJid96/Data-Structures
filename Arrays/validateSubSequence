@@ -1,0 +1,45 @@
+
+Q-  Given two non-empty arrays of integers, write a function that determines
+  whether the second array is a subsequence of the first one.
+
+
+  A subsequence of an array is a set of numbers that aren't necessarily adjacent
+  in the array but that are in the same order as they appear in the array. For
+  instance, the numbers  <span>[1, 3, 4]</span>  form a subsequence of the array
+  <span>[1, 2, 3, 4]</span>, and so do the numbers <span>[2, 4]</span>. Note
+  that a single number in an array and the array itself are both valid
+  subsequences of the array.
+
+<h3>Sample Input</h3>
+ = [5, 1, 22, 25, 6, -1, 8, 10]
+output =" = [1, 6, -1, 10]
+ time complexity:O(n)
+space complexity :O(n)
+#sol1
+
+
+def isValidSubsequence(array, sequence):
+    # Write your code here.
+	arrIdnx=0
+	seqdx=0
+	while arrIdnx < len(array) and seqdx < len(sequence):
+		if array[arrIdnx] == sequence[seqdx]:
+			seqdx+=1;
+		arrIdnx+=1
+	return seqdx ==len(sequence)
+    pass
+#sol 2
+
+
+def isValidSubsequence(array, sequence):
+    # Write your code here.
+    seqIdx=0
+	for value in array:
+			if seqIdx==len(sequence):
+				break
+			if sequence[seqIdx]== value:
+				seqIdx +=1
+			
+	return seqIdx==len(sequence)
+			
+
