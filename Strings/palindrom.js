@@ -12,6 +12,10 @@
 //    o/p : true
 
 
+
+// Space & Time Complexity
+// O(n) time O(1)space
+
 //solution 1
 
 const isPlaindrome=(string)=>{
